@@ -21,7 +21,7 @@ public class FamilyMembership extends Membership{
 
     @Override
     public BigDecimal getMonthlyPrice() {
-        BigDecimal totalPrice = super.getMonthlyPrice();
+        BigDecimal totalPrice = super.getBaseRate();
         for (int i = 0; i < extraMembers; i++) {
             totalPrice = totalPrice.add(new BigDecimal("12.50"));
         }

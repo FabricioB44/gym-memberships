@@ -13,7 +13,10 @@ public abstract class Membership {
         this.baseRate = baseRate;
     }
 
-    public BigDecimal getMonthlyPrice() {
+    // Abstract methods cannot have a body
+    public abstract BigDecimal getMonthlyPrice();
+
+    public BigDecimal getBaseRate() {
         return baseRate;
     }
 
