@@ -33,4 +33,13 @@ public class PremiumMembership extends Membership {
         }
     }
 
+    @Override
+    public String toString() {
+        return String.format(
+                "Membership | %s | %d Months | guest passes: %d",
+                super.getMemberName(),
+                super.getMonths(),
+                guestPasses
+        );
+    }
 }

@@ -11,12 +11,12 @@ public class GymMembership {
         FamilyMembership membership5 = new FamilyMembership("Grace Lee", 12, new BigDecimal("30.00"), 3);
         FamilyMembership membership6 = new FamilyMembership("Emma Wilson", 12, new BigDecimal("30.00"), 1);
         System.out.println("=== Gym Memberships ===");
-        System.out.println(membership1);
-        System.out.println(membership2);
-        membership3.useGuestPass();
-        membership4.useGuestPass();
-        System.out.println(membership5);
-        System.out.println(membership6);
+        System.out.println(membership1.toString());
+        System.out.println(membership2.toString());
+        System.out.println(membership3.toString());
+        System.out.println(membership4.toString());
+        System.out.println(membership5.toString());
+        System.out.println(membership6.toString());
 
         System.out.println(membership1.getContractTotal());
         System.out.println(membership3.getContractTotal());
