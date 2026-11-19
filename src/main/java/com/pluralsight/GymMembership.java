@@ -31,6 +31,23 @@ public class GymMembership {
         System.out.println("Memberships: " + totalMemberships);
         System.out.println("Monthly Income: " + montlyIncome);
         System.out.println("All contracts: " + allContracts);
+
+        System.out.println("\n=== Front desk notes ===");
+        for (Membership membership : memberships) {
+            if (membership instanceof BasicMembership) {
+                if (((BasicMembership) membership).getIsOffPeakOnly()) {
+                    System.out.println(membership.getMemberName() + ": Entry between 10:00 and 16:00 only");
+                }
+            }
+            if (membership instanceof PremiumMembership) {
+                ((PremiumMembership) membership).useGuestPass();
+            }
+            if (membership instanceof FamilyMembership) {
+                int printedKeys = 1 + ((FamilyMembership) membership).getExtraMembers();
+                System.out.println(membership.getMemberName() + ": Print " + printedKeys + " key cards");
+            }
+        }
+
     }
 
     public static void printCosts(Membership membership) {
