@@ -16,4 +16,8 @@ public class Membership {
     public BigDecimal getMonthlyPrice() {
         return baseRate;
     }
+
+    public String getMemberName() {
+        return memberName;
+    }
 }
