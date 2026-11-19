@@ -7,7 +7,8 @@ import java.util.ArrayList;
 public class GymMembership {
     public static void main(String[] args) {
         ArrayList<Membership> memberships = new ArrayList<>();
-        memberships.add(new Membership("Henry Clark", 3, new BigDecimal("30.00")));
+        // 'Membership' is abstract; cannot be instantiated
+        // memberships.add(new Membership("Henry Clark", 3, new BigDecimal("30.00")));
         memberships.add(new BasicMembership("Alice Johnson", 6, new BigDecimal("30.00"), true));
         memberships.add(new BasicMembership("Bob Smith", 2, new BigDecimal("27.50"), false));
         memberships.add(new PremiumMembership("Carol White", 12, new BigDecimal("30.00"), 2));
