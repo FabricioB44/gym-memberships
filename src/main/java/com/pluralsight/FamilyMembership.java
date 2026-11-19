@@ -1,6 +1,7 @@
 package com.pluralsight;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class FamilyMembership extends Membership{
     private int extraMembers;
@@ -28,6 +29,6 @@ public class FamilyMembership extends Membership{
             totalPrice = totalPrice.multiply(new BigDecimal("0.90"));
         }
 
-        return totalPrice;
+        return totalPrice.setScale(2, RoundingMode.HALF_UP);
     }
 }

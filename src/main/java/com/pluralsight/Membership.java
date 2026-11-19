@@ -20,4 +20,16 @@ public class Membership {
     public String getMemberName() {
         return memberName;
     }
+
+    public int getMonths() {
+        return months;
+    }
+
+    public BigDecimal getSignUpFee() {
+        return new BigDecimal("49.00");
+    }
+
+    public BigDecimal getContractTotal() {
+        return getMonthlyPrice().multiply(BigDecimal.valueOf(months)).add(getSignUpFee());
+    }
 }
