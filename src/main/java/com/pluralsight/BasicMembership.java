@@ -14,10 +14,6 @@ public class BasicMembership extends Membership {
         return offPeakOnly;
     }
 
-    public void setIsOffPeakOnly(boolean offPeakOnly) {
-        this.offPeakOnly = offPeakOnly;
-    }
-
     // Class 'BasicMembership' must either be declared abstract or implement abstract method 'getMonthlyPrice()' in 'Membership'
     @Override
     public BigDecimal getMonthlyPrice() {
