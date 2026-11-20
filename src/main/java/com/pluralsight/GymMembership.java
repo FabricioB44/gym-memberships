@@ -20,6 +20,10 @@ public class GymMembership {
         int totalMemberships = 0;
         BigDecimal montlyIncome = BigDecimal.ZERO;
         BigDecimal allContracts = BigDecimal.ZERO;
+
+        Membership largestContractMembership = null;
+        BigDecimal largestContractTotal = BigDecimal.ZERO;
+
         System.out.println("\n=== Gym Memberships ===");
         for (Membership membership : memberships) {
             System.out.println(membership.toString());
@@ -27,12 +31,20 @@ public class GymMembership {
             totalMemberships++;
             montlyIncome = montlyIncome.add(membership.getMonthlyPrice());
             allContracts = allContracts.add(membership.getContractTotal());
+
+            BigDecimal contractTotal = membership.getContractTotal();
+
+            if (contractTotal.compareTo(largestContractTotal) > 0) {
+                largestContractTotal = contractTotal;
+                largestContractMembership = membership;
+            }
         }
 
         System.out.println("\n=== Totals ===");
         System.out.println("Memberships: " + totalMemberships);
         System.out.println("Monthly Income: " + montlyIncome);
         System.out.println("All contracts: " + allContracts);
+        System.out.println("Largest contract: " + largestContractMembership.getMemberName() + ", $" + largestContractTotal);
 
         System.out.println("\n=== Front desk notes ===");
         for (Membership membership : memberships) {
