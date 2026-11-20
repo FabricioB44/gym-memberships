@@ -15,6 +15,7 @@ public class GymMembership {
         memberships.add(new PremiumMembership("Frank Miller", 3, new BigDecimal("30.00"), 0));
         memberships.add(new FamilyMembership("Grace Lee", 12, new BigDecimal("30.00"), 3));
         memberships.add(new FamilyMembership("Emma Wilson", 6, new BigDecimal("30.00"), 1));
+        memberships.add(new CorporateMembership("Olivia Martin", 12, new BigDecimal("30.00"), new BigDecimal("0.40")));
 
         int totalMemberships = 0;
         BigDecimal montlyIncome = BigDecimal.ZERO;
